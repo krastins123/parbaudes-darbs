@@ -1,0 +1,45 @@
+cena = float(input("Ievadi linoleja cena m^2: ")) #cena linoleja m^2
+while cena < 0:
+    print("Ievadi vērtību, kas lielāka par 0!")
+    cena = float(input("Ievadi linoleja cena m^2: "))
+    if type(cena) == str:
+      print("Ievadi vērtību, kas ir skaitlis!")
+    else: 
+      break
+platumsr = float(input("Ievadi ruļļa platumu: ")) #platums rullim
+while platumsr < 0:
+    print("Ievadi vērtību, kas lielāka par 0!")
+    platumsr = float(input("Ievadi ruļļa platumu: "))
+    if type(cena) == str:
+      print("Ievadi vērtību, kas ir skaitlis!")
+    else: 
+      break
+platumst = float(input("Ievadi telpas platumu: ")) #platums telpai
+while platumst < 0:
+    print("Ievadi vērtību, kas lielāka par 0!")
+    platumst = float(input("Ievadi telpas platumu: "))
+    if type(platumst) == str:
+      print("Ievadi vērtību, kas ir skaitlis!")
+    else: 
+      break
+garumst = float(input("Ievadi telpas garumu: ")) #garums telpai
+while garumst < 0:
+    print("Ievadi vērtību, kas lielāka par 0!")
+    garumst = float(input("Ievadi telpas garumu: "))
+    if type(garumst) == str:
+      print("Ievadi vērtību, kas ir skaitlis!")
+    else: 
+      break
+platumsr = round(platumsr, 1)
+print(platumsr)
+b = round(platumst, 0)
+print(b)
+c = round(garumst, 0)
+print(c)
+def aprekinat_gridas_laukumu(platumst, garumst):
+  laukums = platumst * garumst
+  return laukums
+def linoleja_izmaksas(laukums, cena):
+  izmaksas = laukums * cena
+  return izmaksas
+print(linoleja_izmaksas(aprekinat_gridas_laukumu(platumst, garumst), cena), "eiro")
